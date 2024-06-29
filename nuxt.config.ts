@@ -6,23 +6,16 @@ export default defineNuxtConfig({
   alias: {
     "@img": fileURLToPath(new URL("./shared/images/", import.meta.url)),
   },
-  
-  css: [
-    "@/app/scss/main.scss"
-  ],
+
+  css: ["@/app/css/normalize.css", "@/app/scss/main.scss"],
 
   app: {
     head: {
       title: "Golden Honey",
     },
   },
-
   components: {
     global: true,
-    dirs: [
-      "./components", 
-      "./shared/icons",
-      "./shared/components",
-    ],
+    dirs: ["./components", "./shared/icons", "./shared/components"],
   },
 });
