@@ -1,0 +1,5 @@
+@mixin text-mixin($ff, $fs: $body-text, $weight: 400) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $weight;
+}
