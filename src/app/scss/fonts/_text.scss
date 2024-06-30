@@ -1,5 +1,13 @@
 @import "../mixins/text-mixin";
 
+.lora {
+  font-family: var(--lora-font-family);
+}
+
+.elephant {
+  font-family: var(--elephant-font-family);
+}
+
 .h1-text {
   @include text-mixin(var(--elephant-font-family), var(--h1-text));
 }
@@ -25,4 +33,10 @@
   &_bold {
     font-weight: 700;
   }
+}
+
+.gradient-main {
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

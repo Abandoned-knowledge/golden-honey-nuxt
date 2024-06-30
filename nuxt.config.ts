@@ -22,6 +22,10 @@ export default defineNuxtConfig({
   },
   components: {
     global: true,
-    dirs: ["./components", "./shared/icons", "./shared/components"],
+    dirs: [
+      "./components", 
+      "./shared/icons",
+      "./shared/components",
+    ],
   },
 });
