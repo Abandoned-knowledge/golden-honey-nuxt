@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   alias: {
-    "@img": fileURLToPath(new URL("./shared/images/", import.meta.url)),
+    img: fileURLToPath(new URL("./src/shared/images/", import.meta.url)),
+    scss: fileURLToPath(new URL("./src/app/scss/main.scss", import.meta.url)),
   },
   css: ["@/app/css/normalize.css", "@/app/scss/main.scss"],
 
@@ -22,10 +23,6 @@ export default defineNuxtConfig({
   },
   components: {
     global: true,
-    dirs: [
-      "./components", 
-      "./shared/icons",
-      "./shared/components",
-    ],
+    dirs: ["./components", "./shared/icons", "./shared/components"],
   },
 });

@@ -10,6 +10,8 @@ import Menu from "./Menu/Menu.vue";
 </template>
 
 <style lang="scss" scoped>
+@import "scss";
+
 .container {
   display: flex;
   justify-content: space-between;
