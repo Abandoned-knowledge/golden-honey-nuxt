@@ -17,5 +17,6 @@ import Menu from "./Menu/Menu.vue";
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  margin-top: 10px;
 }
 </style>
