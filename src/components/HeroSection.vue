@@ -8,7 +8,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
   <section class="hero" :class="{ animate: isAnimate }">
     <img class="hero__bg" src="img/hero-section-bg.png" alt="hero section background" />
     <div class="hero__bg-radial"></div>
-    <div class="hero__main" @click="isAnimate = !isAnimate">
+    <div class="hero__main">
       <h1 class="h1-text">golden honey</h1>
       <img class="hero__photo" src="img/hero-section-main.png" alt="honey" />
 
