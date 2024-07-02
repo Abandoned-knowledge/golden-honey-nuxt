@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const isAnimate = ref(false);
 
-// onMounted(() => setTimeout(() => (isAnimate.value = !isAnimate.value), 500));
+onMounted(() => setTimeout(() => (isAnimate.value = !isAnimate.value), 500));
 </script>
 
 <template>
-  <div class="text-container" :class="{ animate: isAnimate }" @click="isAnimate = !isAnimate">
+  <div class="text-container" :class="{ animate: isAnimate }">
     <H2BeeIcon class="text-container__icon" />
     <h2 class="h2-text text-container__text">
       <slot></slot>
