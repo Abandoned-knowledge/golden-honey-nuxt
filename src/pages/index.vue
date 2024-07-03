@@ -2,4 +2,5 @@
 
 <template>
   <HeroSection />
+  <AboutUs />
 </template>
