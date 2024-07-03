@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <HeroSection />
-  <AboutUs />
+  <!-- <HeroSection /> -->
+  <!-- <AboutUs /> -->
+  <Products />
 </template>

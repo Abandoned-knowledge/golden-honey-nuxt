@@ -1,6 +1,8 @@
 import { fileURLToPath } from "url";
 
 export default defineNuxtConfig({
+  ssr: true,
+
   srcDir: "./src",
 
   devtools: { enabled: false },
@@ -23,6 +25,6 @@ export default defineNuxtConfig({
   },
   components: {
     global: true,
-    dirs: ["./components", "./shared/icons", "./shared/components"],
+    dirs: ["./components", "./shared/icons", "./shared/icons/products", "./shared/components"],
   },
 });
