@@ -1,6 +1,12 @@
 import { fileURLToPath } from "url";
 
 export default defineNuxtConfig({
+  modules: ["nuxt-swiper"],
+
+  swiper: {
+    modules: ["pagination"],
+  },
+
   ssr: true,
 
   srcDir: "./src",

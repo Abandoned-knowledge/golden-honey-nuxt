@@ -3,5 +3,6 @@
 <template>
   <!-- <HeroSection /> -->
   <!-- <AboutUs /> -->
-  <Products />
+  <!-- <Products /> -->
+  <SpecialOffers />
 </template>
