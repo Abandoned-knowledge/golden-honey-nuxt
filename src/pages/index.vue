@@ -4,5 +4,6 @@
   <!-- <HeroSection /> -->
   <!-- <AboutUs /> -->
   <!-- <Products /> -->
-  <SpecialOffers />
+  <!-- <SpecialOffers /> -->
+  <Locations />
 </template>
