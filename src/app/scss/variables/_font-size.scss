@@ -1,7 +1,26 @@
+@import '../mixins/media-query';
+
 :root{
     --h1-text: 64px;
     --h2-text: 40px;
     --title-text: 24px;
     --body-lg-text: 18px;
     --body-text: 16px;
+
+    @include mqs(lg){
+        --h1-text: 54px;
+        --h2-text: 32px;
+        --title-text: 20px;
+    }
+    @include mqs(md){
+        --h1-text: 44px;
+        --h2-text: 28px;
+        --title-text: 18px;
+        --body-lg-text: 16px;
+        --body-text: 14px;
+    }
+    @include mqs(sm){
+        --h1-text: 34px;
+        --h2-text: 22px;
+    }
 }
