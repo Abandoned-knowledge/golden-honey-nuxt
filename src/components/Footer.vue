@@ -38,6 +38,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </template>
 
 <style lang="scss" scoped>
+@import 'scss';
 .animate {
   .footer {
     &__up,
@@ -57,6 +58,10 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
   margin-bottom: 50px;
   margin-top: 250px;
 
+  @include mqs(lg) {
+    width: 80%;
+  }
+
   &__up,
   &__down {
     display: flex;
@@ -69,6 +74,11 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 
   &__up {
     translate: 0% -50%;
+
+    @include mqs(sm) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__down {
@@ -88,6 +98,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
   display: flex;
   align-items: center;
   gap: 10px;
+  text-align: center;
 
   span {
     margin-left: 30px;
