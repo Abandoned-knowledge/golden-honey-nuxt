@@ -23,9 +23,9 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
         <div class="item__sizes">
           <p class="body-text body-text_lg body-text_bold">Size :</p>
           <div class="bars">
-            <HoneyBarLg />
-            <HoneyBarMd />
-            <HoneyBarSm />
+            <HoneyBarLg class="bars__icon" />
+            <HoneyBarMd class="bars__icon" />
+            <HoneyBarSm class="bars__icon" />
           </div>
         </div>
 
@@ -40,6 +40,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
 </template>
 
 <style lang="scss" scoped>
+@import "scss";
 .animate.item {
   opacity: 1;
 }
@@ -54,10 +55,29 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
   opacity: 0;
   transition: all 0.4s ease;
 
+  @include mqs(md) {
+    gap: 25px;
+    width: 90%;
+  }
+
+  @include mqs(sm) {
+    gap: 10px;
+    padding: 15px;
+  }
+
   &__image {
     height: 300px;
     width: 250px;
     object-fit: cover;
+
+    @include mqs(md) {
+      height: 250px;
+      width: 200px;
+    }
+    @include mqs(sm) {
+      height: 200px;
+      width: 150px;
+    }
   }
 
   &__image-container {
@@ -66,6 +86,9 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    @include mqs(md) {
+      gap: 0px;
+    }
   }
 
   &__content {
@@ -77,6 +100,10 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
   &__specifications {
     display: flex;
     gap: 50px;
+    @include mqs(md) {
+      gap: 30px;
+      align-items: end;
+    }
   }
 
   &__sizes {
@@ -89,6 +116,17 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
   display: flex;
   align-items: end;
   gap: 10px;
+
+  @include mqs(sm) {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__icon {
+    @include mqs(sm) {
+      scale: .8;
+    }
+  }
 }
 
 .body-text {
