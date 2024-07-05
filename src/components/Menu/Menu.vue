@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { data: items } = await useFetch("/api/navigationLinks");
 let isAnimate = ref(false);
-onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
+onMounted(() => setTimeout(() => (isAnimate.value = true), 500));
 </script>
 
 <template>

@@ -7,8 +7,6 @@ function getRandomValue(min: number, max: number): number {
 onMounted(() => {
   const combs: HTMLElement[] = Array.from(document.querySelectorAll(".combs path"));
   combs.forEach((comb: HTMLElement) => (comb.style.transitionDelay = `${getRandomValue(100, 400)}ms`));
-
-  setTimeout(() => (isAnimate.value = true), 1000);
 });
 </script>
 

@@ -10,21 +10,17 @@ const productSecondRow = products.value?.slice(4, 8);
 
 const productsRows = [productFirstRow, productSecondRow];
 
-const isAnimate = ref<boolean>(false);
-
 onMounted(() => {
   const combs: HTMLElement[] = Array.from(document.querySelectorAll(".comb"));
   combs.forEach((comb: HTMLElement) => (comb.style.transitionDelay = `${getRandomValue(100, 350)}ms`));
-
-  setTimeout(() => (isAnimate.value = true), 1000);
 });
 </script>
 
 <template>
-  <section class="container m-comp">
+  <section class="container m-comp animation-component">
     <H2Text>Products</H2Text>
 
-    <div class="combs" :class="{ animate: isAnimate }">
+    <div class="combs">
       <div class="row" v-for="row in productsRows">
         <div class="comb" v-for="item in row">
           <ProductsHoneyCombFrame class="comb__frame" />

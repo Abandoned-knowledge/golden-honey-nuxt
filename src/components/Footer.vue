@@ -3,13 +3,11 @@ import InstagrammIcon from "~/shared/icons/SoMe/InstagrammIcon.vue";
 import LinkedinIcon from "~/shared/icons/SoMe/LinkedinIcon.vue";
 import YouTubeIcon from "~/shared/icons/SoMe/YouTubeIcon.vue";
 
-const isAnimate = ref<boolean>(false);
 
-onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </script>
 
 <template>
-  <footer class="container footer" :class="{ animate: isAnimate }">
+  <footer class="container footer animation-component">
     <div class="footer__up">
       <div class="contacts">
         <p class="body-text"><ContactsEmailIcon /> Email <span> honey@gmail.com </span></p>

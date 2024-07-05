@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const isAnimate = ref(false);
 
-onMounted(() => setTimeout(() => (isAnimate.value = !isAnimate.value), 500));
 </script>
 
 <template>

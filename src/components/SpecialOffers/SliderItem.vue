@@ -2,13 +2,10 @@
 import { type ISliderItem } from "@/app/interfaces/interfaces";
 
 const props = defineProps<ISliderItem>();
-const isAnimate = ref<boolean>(false);
-
-onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
 </script>
 
 <template>
-  <article class="item" :class="{ animate: isAnimate }">
+  <article class="item animation-component">
     <div class="item__image-container">
       <img :src="props.imgSrc" class="item__image" alt="honey bar" />
       <p class="body-text body-text_lg">{{ props.name }}</p>
@@ -124,7 +121,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
 
   &__icon {
     @include mqs(sm) {
-      scale: .8;
+      scale: 0.8;
     }
   }
 }

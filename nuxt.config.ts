@@ -33,4 +33,8 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["./components", "./shared/icons", "./shared/icons/products", "./shared/icons/SoMe", "./shared/components"],
   },
+
+  imports: {
+    dirs: ['./features/*.ts']
+  }
 });

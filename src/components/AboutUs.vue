@@ -1,11 +1,8 @@
 <script setup lang="ts">
-const isAnimate = ref<boolean>(false);
-
-onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </script>
 
 <template>
-  <section class="container about m-comp" :class="{ animate: isAnimate }">
+  <section class="container about m-comp animation-component">
     <H2Text>About Us</H2Text>
 
     <div class="about__content">

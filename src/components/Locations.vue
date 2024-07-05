@@ -3,17 +3,13 @@ const { data: rawLinks } = await useFetch("/api/locationLinks");
 const firstLinks = rawLinks.value?.slice(0, 2);
 const lastLinks = rawLinks.value?.slice(2, 4);
 const links = [firstLinks, lastLinks];
-
-const isAnimate = ref<boolean>(false);
-
-onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </script>
 
 <template>
-  <section class="container m-comp">
+  <section class="container m-comp animation-component">
     <H2Text>Find us at</H2Text>
 
-    <div class="location" :class="{ animate: isAnimate }">
+    <div class="location">
       <LocationIcon class="location__icon" />
 
       <div class="links">
