@@ -1,3 +1,8 @@
-.m-comp{
-    margin-top: 150px;
+@import "../mixins/media-query";
+
+.m-comp {
+  margin-top: 150px;
+  @include mqs(md) {
+    margin-top: 100px;
+  }
 }

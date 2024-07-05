@@ -61,6 +61,9 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
   @include mqs(lg) {
     width: 80%;
   }
+  @include mqs(md) {
+    margin-top: 100px;
+  }
 
   &__up,
   &__down {
