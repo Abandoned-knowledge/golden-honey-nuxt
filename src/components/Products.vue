@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="container">
+  <section class="container m-comp">
     <H2Text>Products</H2Text>
 
     <div class="combs" :class="{ animate: isAnimate }">
@@ -61,10 +61,6 @@ onMounted(() => {
 .animate .comb {
   scale: 1;
   opacity: 1;
-}
-
-.combs {
-  margin-top: 100px;
 }
 
 .comb {

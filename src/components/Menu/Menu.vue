@@ -2,9 +2,7 @@
 const items = [
   { id: 1, name: "about us", link: "/" },
   { id: 2, name: "products", link: "/" },
-  { id: 3, name: "delivery apps", link: "/" },
   { id: 4, name: "locations", link: "/" },
-  { id: 5, name: "contacts", link: "/" },
 ];
 
 let isAnimate = ref(false);

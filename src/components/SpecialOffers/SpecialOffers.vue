@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="container">
+  <section class="container m-comp">
     <H2Text>Special offers</H2Text>
     <SpecialOffersSlider />
   </section>

@@ -10,7 +10,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </script>
 
 <template>
-  <section class="container">
+  <section class="container m-comp">
     <H2Text>Find us at</H2Text>
 
     <div class="location" :class="{ animate: isAnimate }">
