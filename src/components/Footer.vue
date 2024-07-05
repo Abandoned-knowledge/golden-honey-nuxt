@@ -55,7 +55,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
   gap: 50px;
   width: 50%;
   margin-bottom: 50px;
-  margin-top: 150px;
+  margin-top: 250px;
 
   &__up,
   &__down {
