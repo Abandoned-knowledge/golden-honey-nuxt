@@ -8,6 +8,8 @@ const { data: products } = await useFetch("/api/products");
 const productFirstRow = products.value?.slice(0, 4);
 const productSecondRow = products.value?.slice(4, 8);
 
+const productsRows = [productFirstRow, productSecondRow];
+
 const isAnimate = ref<boolean>(false);
 
 onMounted(() => {
@@ -23,22 +25,12 @@ onMounted(() => {
     <H2Text>Products</H2Text>
 
     <div class="combs" :class="{ animate: isAnimate }">
-      <div class="row row_first">
-        <div class="comb" v-for="item in productFirstRow">
-          <ProductsHoneyCombFrame />
+      <div class="row" v-for="row in productsRows">
+        <div class="comb" v-for="item in row">
+          <ProductsHoneyCombFrame class="comb__frame" />
           <component :is="item.iconName" class="comb__icon" />
           <div class="comb__name">
-            <ProductsHoneyCombPanel />
-            <span class="title-text">{{ item.name }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="row row_second">
-        <div class="comb" v-for="item in productSecondRow">
-          <ProductsHoneyCombFrame />
-          <component :is="item.iconName" class="comb__icon" />
-          <div class="comb__name">
-            <ProductsHoneyCombPanel />
+            <ProductsHoneyCombPanel class="comb__panel" />
             <span class="title-text">{{ item.name }}</span>
           </div>
         </div>
@@ -48,10 +40,15 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+@import "scss";
 .row {
   display: flex;
   gap: 20px;
   justify-content: center;
+
+  @include mqs(sm) {
+    gap: 10px;
+  }
 
   &_second {
     translate: 0px -20px;
@@ -73,8 +70,27 @@ onMounted(() => {
   transition: all 0.25s ease;
   opacity: 0;
 
+  &__frame {
+    height: fit-content;
+
+    @include mqs(lg) {
+      width: 150px;
+    }
+    @include mqs(md) {
+      width: 100px;
+    }
+    @include mqs(sm) {
+      width: 75px;
+    }
+  }
   &__icon {
     position: absolute;
+    width: 80%;
+    height: 80%;
+  }
+  &__panel {
+    width: 100%;
+    height: 100%;
   }
 
   &__name {
