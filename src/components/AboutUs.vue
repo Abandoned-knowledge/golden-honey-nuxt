@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="container about m-comp animation-component">
+  <section class="container about m-comp animation-component" id="about">
     <H2Text>About Us</H2Text>
 
     <div class="about__content">

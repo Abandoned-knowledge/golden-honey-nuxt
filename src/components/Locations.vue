@@ -6,7 +6,7 @@ const links = [firstLinks, lastLinks];
 </script>
 
 <template>
-  <section class="container m-comp animation-component">
+  <section class="container m-comp animation-component" id="locations">
     <H2Text>Find us at</H2Text>
 
     <div class="location">

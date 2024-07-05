@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="container m-comp animation-component">
+  <section class="container m-comp animation-component" id="products">
     <H2Text>Products</H2Text>
 
     <div class="combs">

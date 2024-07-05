@@ -1,7 +1,7 @@
 body {
   background-color: var(--bg-color);
   overflow-x: hidden;
-
+  scroll-behavior: smooth !important;
   &.lock {
     overflow-y: hidden;
   }
