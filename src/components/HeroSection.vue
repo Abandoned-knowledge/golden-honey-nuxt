@@ -18,6 +18,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </template>
 
 <style lang="scss" scoped>
+@import "scss";
 $trans: all 0.45s ease;
 .animate {
   & .hero__bg {
@@ -49,6 +50,10 @@ $trans: all 0.45s ease;
     opacity: 0;
     scale: 0.7;
 
+    @include mqs(sm) {
+      height: 70vh;
+    }
+
     &-radial {
       position: absolute;
       top: 50px;
@@ -73,6 +78,10 @@ $trans: all 0.45s ease;
     transition: $trans;
     translate: 0% 20%;
     transition-delay: 200ms;
+
+    @include mqs(md) {
+      width: 60%;
+    }
   }
 
   &__main-bg-light {
@@ -88,6 +97,9 @@ $trans: all 0.45s ease;
     background: radial-gradient(circle, rgba(255, 184, 0, 0.5) 0%, rgba(217, 217, 217, 0) 50%);
     z-index: -1;
     top: 20%;
+    @include mqs(md) {
+      width: 80%;
+    }
   }
 }
 
