@@ -26,6 +26,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
 </template>
 
 <style lang="scss" scoped>
+@import "scss";
 .animate {
   & .about__text {
     opacity: 1;
@@ -45,13 +46,19 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
     justify-items: center;
     gap: 50px;
     height: 500px;
+
+    @include mqs(md) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      height: 100%;
+      text-align: center;
+    }
   }
 
   &__text,
   &__honey-bar {
     opacity: 0;
     transition: all 0.4s ease;
-
   }
 
   &__text {
@@ -67,19 +74,26 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 1000));
     align-items: center;
     height: inherit;
     width: auto;
+
+    @include mqs(md) {
+      height: 400px;
+    }
   }
-  
+
   &__honey-bar {
     height: 80%;
     width: auto;
     translate: 30%;
     transition-delay: 400ms;
   }
-  
+
   &__honeycomb {
     position: absolute;
     bottom: 20%;
     z-index: -1;
+    @include mqs(sm) {
+      width: 250%;
+    }
   }
 }
 </style>
