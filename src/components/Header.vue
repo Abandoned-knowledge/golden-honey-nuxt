@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import HamburgerMenu from "./Menu/HamburgerMenu.vue";
 import Menu from "./Menu/Menu.vue";
 </script>
 
 <template>
   <header class="container">
     <MainLogo />
+    <HamburgerMenu />
     <Menu />
   </header>
 </template>

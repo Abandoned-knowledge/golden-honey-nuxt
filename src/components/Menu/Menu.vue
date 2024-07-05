@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const items = [
-  { id: 1, name: "about us", link: "/" },
-  { id: 2, name: "products", link: "/" },
-  { id: 4, name: "locations", link: "/" },
-];
-
+const { data: items } = await useFetch("/api/navigationLinks");
 let isAnimate = ref(false);
 onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
 </script>
@@ -20,6 +15,7 @@ onMounted(() => setTimeout(() => (isAnimate.value = true), 750));
 </template>
 
 <style lang="scss" scoped>
+@import "scss";
 $border-radius: 10px;
 .nav {
   display: flex;
@@ -34,6 +30,9 @@ $border-radius: 10px;
   position: relative;
   border: 1px solid var(--main-color);
 
+  @include mqs(md) {
+    display: none;
+  }
   &__item {
     opacity: 0;
     margin: 10px 0px;

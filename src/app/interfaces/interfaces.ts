@@ -7,3 +7,9 @@ export interface ISliderItem {
   region: string;
   price: number;
 }
+
+export interface INavigationLink {
+  id: number;
+  name: string;
+  link: string;
+}
